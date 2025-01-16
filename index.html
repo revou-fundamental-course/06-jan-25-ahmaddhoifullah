@@ -1,32 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>Nusantara Tour and Travel</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!--- Logo & Navigation --->
-    <header class="main-header"> 
-        <div class="logo-icon">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="src\logo.png" alt="Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#profile">Our Profile</a></li>
+                    <li><a href="#headquarter">Temukan Kami</a></li>
+                    <li><a href="#message-us">Tinggalkan Pesan</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>    
 
+    <section id="home" class="banner">
+        <div class="banner-container">
+            <h1>Hi <span id="user-name"></span>, Welcome to Nusantara</h1>
+            <p>Ini adalah website Nusantara Tour & Travel</p>
         </div>
- 
-    <!--- Navigation --->
-    <nav>
-        
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Service</a>
-            <a href="">Contact</a> 
-    </nav>
-    </header>
+    </section>
 
-    <!--- Main Content --->
-    <main></main>
+    <section id="headquarter" class="section-max">
+        <h2>Temukan Kami</h2>
+        <div class="container-quarter">
+            <div class="text-center">
+                <div class="rounding">
+                    <img src="https://i.ibb.co.com/dW8MjZB/010342600-1561002587-i-Stock-859322390.webp" alt="Jambi">
+                </div>
+                <span class="text-label">Jambi</span>
+            </div>
+            <div class="text-center">
+                <div class="rounding">
+                    <img src="https://i.ibb.co.com/n037TW5/image.jpg" alt="Jakarta">
+                </div>
+                <span class="text-label">Jakarta</span>
+            </div>
+            <div class="text-center">
+                <div class="rounding">
+                    <img src="https://i.ibb.co.com/mBh2PtK/63db4bb5c8574.jpg" alt="Yogyakarta">
+                </div>
+                <span class="text-label">Yogyakarta</span>
+            </div>
+        </div>
+    </section>
 
-    <footer></footer>
+    <section id="about-company" class="section-max">
+        <h2>Tentang Kami</h2>
+        <p>Nusantara Tour and Travel adalah perusahaan yang berdedikasi untuk menyediakan layanan perjalanan terbaik bagi pelanggan kami. Dengan pengalaman yang luas di industri perjalanan, kami berkomitmen untuk memberikan solusi perjalanan yang aman, nyaman, dan berkesan.</p>
+        <p>Fokus utama kami adalah membantu pelanggan menjelajahi keindahan Nusantara dan destinasi internasional melalui layanan yang personal dan profesional. Kami menyediakan berbagai layanan, termasuk tiket pesawat, paket tur domestik dan internasional, akomodasi, hingga kebutuhan perjalanan lainnya yang dirancang untuk memenuhi kebutuhan dan preferensi Anda.</p>
+    </section>
+    
+    <section id="vision-and-mission" class="section-max">
+        <h2>Visi dan Misi</h2>
+        <p>Visi kami adalah menjadi mitra perjalanan tepercaya yang menginspirasi setiap individu untuk menjelajahi dunia dengan cara yang lebih mudah dan menyenangkan. Dengan tim profesional yang ramah dan berpengalaman, Nusantara Tour and Travel selalu siap membantu Anda merencanakan perjalanan impian Anda.
+        </p>
+    </section>
+
+    <section id="message-us" class="section-max">
+        <h2>Tinggalkan Pesan</h2>
+        <div class="flex-div">
+            <div>
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" name="name" placeholder="Nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birth-date">Tanggal Lahir:</label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+                    <div class="radio-group">
+                        <label>Jenis Kelamin:</label>
+                        <label class="div-label" for="male">
+                        <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                        <div class="label">Laki-Laki</div>
+                        </label>
+                        <label class="div-label" for="female">
+                        <input type="radio" id="female" name="gender" value="Perempuan">
+                        <div class="label">Perempuan</div>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group-pesan">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message" placeholder="Pesan" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div>
+                <div>
+                    <b>Waktu Sekarang : </b>
+                    <span id="current-time">-</span>
+                </div>
+                <div>
+                    <b>Nama : </b>
+                    <span id="output-name">-</span>
+                </div>
+                <div>
+                    <b>Tanggal Lahir : </b>
+                    <span id="output-birth-date">-</span>
+                </div>
+                <div>
+                    <b>Jenis Kelamin : </b>
+                    <span id="output-gender">-</span>
+                </div>
+                <div>
+                    <b>Pesan : </b>
+                    <span id="output-message">-</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created By Ahmad Dhoifullah</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
